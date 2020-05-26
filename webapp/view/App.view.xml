@@ -1,0 +1,91 @@
+<mvc:View controllerName="wvega.com.EditableTable.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}"  class="pp">
+					<content>
+						<Table id="idProductsTable" growing="true" growingThreshold="10" paste="onPaste" >
+							<headerToolbar>
+								<OverflowToolbar id="otbSubheader">
+									<Title text="Reporte de Horas por Proyecto - Valorizado" level="H2"/>
+									<ToolbarSpacer/>
+									<Button id="editButton" text="Edit" type="Transparent" press="onEdit"/>
+									<Button id="saveButton" text="Save" type="Transparent" press="onSave" visible="false"/>
+									<Button id="cancelButton" text="Cancel" type="Transparent" press="onCancel" visible="false"/>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns>
+								<!--<Column width="12em">-->
+								<!--	<Text text="Product"/>-->
+								<!--</Column>-->
+								<!--<Column minScreenWidth="Tablet" demandPopin="true" hAlign="End">-->
+								<!--	<Text text="Quantity"/>-->
+								<!--</Column>-->
+								<!--<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">-->
+								<!--	<Text text="Weight"/>-->
+								<!--</Column>-->
+								<!--<Column hAlign="End">-->
+								<!--	<Text text="Price"/>-->
+								<!--</Column>-->
+								<Column width="2em">
+									<Text text="Proveedor"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Año"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Mes"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Semana del Mes"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Tipo de Liquidacion"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Primera Linea TI-FI"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Tipo de Imputacion"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Elemento PEP del Capex"/>
+								</Column>
+								<Column width="2em">
+									<Text text="Combo"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<!--<ObjectIdentifier title="{mMaterial>Name}" text="{mMaterial>ProductId}"/>-->
+										
+										<!--<ObjectNumber number="{ path:'mMaterial>Quantity', type: 'sap.ui.model.type.String', formatOptions: {showMeasure: false} }" unit="{mMaterial>UoM}"/>-->
+										<!--<ObjectNumber number="{mMaterial>WeightMeasure}" unit="{mMaterial>WeightUnit}"-->
+										<!--	state="{ path: 'mMaterial>WeightMeasure', formatter: '.formatter.weightState' }"-->
+										<!--	/>-->
+										<!--<ObjectNumber-->
+										<!--	number="{ parts:[{path:'mMaterial>Price'},{path:'mMaterial>CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"-->
+										<!--	unit="{mMaterial>CurrencyCode}"/>-->
+										<ObjectIdentifier title="{mMaterial>Proveedor}" />
+										<ObjectIdentifier title="{mMaterial>Amo}" />
+										<ObjectIdentifier title="{mMaterial>Mes}" />
+										<ObjectIdentifier title="{mMaterial>SemanaMes}" />
+										<ObjectIdentifier title="{mMaterial>TipoLiquidacion}" />
+										<ObjectIdentifier title="{mMaterial>PrimLinTiFi}" />
+										<ObjectIdentifier title="{mMaterial>TipoImp}" />
+										<ObjectIdentifier title="{mMaterial>ELmPepCapx}" />
+										<!--<ComboBox selectionChange="onchange" items="{path: 'mMaterial>Id',-->
+										<!--										sorter: { path: 'mMaterial>Id' }	}"/>-->
+										<!--<core:Item key="{mMaterial>Id}" text="{mMaterial>Id}" />-->
+										<!--<ComboBox />-->
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
